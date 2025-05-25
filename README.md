@@ -1,14 +1,12 @@
-```markdown
-# 🧪 Soil Type Classification - Deep Learning Project
+# Soil Type Classification - Deep Learning Project
 
 This repository contains the implementation for soil type classification using deep learning (ResNet50). The model classifies soil images into four categories: Alluvial soil, Black Soil, Clay soil, and Red soil.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
-
 challenge-1/
 ├── data/                         # Dataset and helper script
 │   └── download.sh               # Script to download dataset
@@ -30,9 +28,9 @@ challenge-1/
 
 ---
 
-## 📚 Notebooks
+## Notebooks
 
-### 🔧 `training.ipynb`
+###  `training.ipynb`
 - Located at `challenge-1/notebooks/training.ipynb`
 - Loads and preprocesses the dataset
 - Computes dataset statistics and class weights
@@ -41,7 +39,7 @@ challenge-1/
 - Tracks and logs metrics (accuracy, F1 macro/min)
 - Saves the best model to `best_resnet50.pth`
 
-### 🔍 `inference.ipynb`
+###  `inference.ipynb`
 - Loads the trained model
 - Applies test-time preprocessing
 - Generates predictions on test images
@@ -49,7 +47,7 @@ challenge-1/
 
 ---
 
-## 🛠️ Key Modules
+##  Key Modules
 
 ### `src/preprocessing.py`
 - `SoilDataset`: PyTorch-compatible dataset loader
@@ -63,7 +61,7 @@ challenge-1/
 
 ---
 
-## 🧠 Model Info
+##  Model Info
 
 - Model: `ResNet50` (pretrained backbone)
 - Optimizer: `Adam`
@@ -73,7 +71,7 @@ challenge-1/
 
 ---
 
-## 📊 Final Performance
+##  Final Performance
 
 From `ml-metrics.json` (see `docs/cards/`):
 
@@ -86,19 +84,17 @@ From `ml-metrics.json` (see `docs/cards/`):
 
 ---
 
-## 🧪 Dataset Format
+##  Dataset Format
 
 The dataset should be placed as:
 
 ```
-
 data/
 ├── train/
 ├── test/
-├── train\_labels.csv
-└── test\_ids.csv
-
-````
+├── train_labels.csv
+└── test_ids.csv
+```
 
 Each row in `train_labels.csv` must contain:
 - `image_id`
@@ -109,13 +105,13 @@ Each row in `test_ids.csv` must contain:
 
 ---
 
-## 🔧 Installation
+##  Installation
 
 Install dependencies:
 
 ```bash
 pip install -r requirements.txt
-````
+```
 
 If you're using GPU with CUDA:
 
@@ -126,11 +122,11 @@ pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
 
 ---
 
-## 📤 Submission Format
+##  Submission Format
 
 Output CSV (`submission.csv`) must have:
 
-```
+```csv
 image_id,soil_type
 img_123.jpg,Red soil
 img_456.jpg,Alluvial soil
@@ -139,24 +135,71 @@ img_456.jpg,Alluvial soil
 
 ---
 
-## 👨‍💻 Authors
+##  How to Run `training.ipynb`
 
-Team: **SoilClassifiers**
+### 🔹 Option 1: Run via Jupyter Notebook Interface (Recommended)
 
-* Vaibhav Sharma
-* Shreya Khantal
-* Prasanna Saxena
+1. **Activate your environment** (if using `venv` or `conda`):
+   ```bash
+   conda activate your_env_name
+   # or
+   source venv/bin/activate
+   ```
+
+2. **Launch Jupyter Notebook**:
+   ```bash
+   jupyter notebook
+   ```
+
+3. **Navigate to**:
+   ```
+   challenge-1/notebooks/training.ipynb
+   ```
+
+4. **Open the notebook** and run each cell sequentially:
+   - It will train the ResNet50 model.
+   - Logs validation accuracy, F1-scores (macro, min).
+   - Saves the best model as `best_resnet50.pth` in the current directory.
 
 ---
 
-## 🖼️ References
+### 🔹 Option 2: Run via Command Line (Non-interactive)
 
-* `architecture.png`: High-level model flow diagram
-* `ml-metrics.json`: Final F1 scores per class
+You can run the notebook headlessly and export output as HTML:
+
+```bash
+cd challenge-1/notebooks
+jupyter nbconvert --to notebook --execute training.ipynb --output training_output.ipynb
+```
+
+> This will create a new file `training_output.ipynb` with outputs embedded.
 
 ---
 
-## 📄 License
+###  Output Files
+
+- `best_resnet50.pth`: Saved PyTorch model (after training)
+- `training_output.ipynb`: (Optional) Notebook with outputs (if using CLI)
+
+---
+
+## Authors
+
+**Team: SoilClassifiers**
+
+- Vaibhav Sharma
+- Shreya Khantal
+- Prasanna Saxena
+
+---
+
+## References
+
+- `architecture.png`: High-level model flow diagram
+- `ml-metrics.json`: Final F1 scores per class
+
+---
+
+## License
 
 This project is for academic and research purposes only.
-
