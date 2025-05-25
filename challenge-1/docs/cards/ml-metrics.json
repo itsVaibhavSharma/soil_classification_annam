@@ -1,0 +1,13 @@
+{
+  "_comment": "This JSON file contains the updated ml-metrics",
+  "Name": "Vaibhav Sharma, Shreya Khantal, Prasanna Saxena",
+  "Kaggle Username": "itsvaibhav007, shreyakhantal, prasannasaxena",
+  "Team Name": "Team Cygnus",
+  "f1 scores": {
+    "_comment": "Here are the class-wise F1 scores from final validation",
+    "alluvial soil": 0.98,
+    "red soil": 0.99,
+    "black soil": 0.98,
+    "clay soil": 0.98
+  }
+}
