@@ -1,0 +1,11 @@
+{
+  "_comment": "This JSON file contains the final binary classification metric from the soil classification model",
+  "Name": "Vaibhav Sharma, Shreya Khantal, Prasanna Saxena",
+  "Kaggle Username": "itsvaibhav007, shreyakhantal, prasannasaxena",
+  "Team Name": "Team Cygnus",
+  "f1 scores": {
+    "_comment": "Binary classification - soil vs non-soil",
+    "soil (label 1)": 0.9939,
+    "non-soil (label 0)": 0.9939
+  }
+}
