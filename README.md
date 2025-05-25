@@ -185,7 +185,7 @@ jupyter nbconvert --to notebook --execute training.ipynb --output training_outpu
 
 ## Authors
 
-**Team: SoilClassifiers**
+**Team: Team Cygnus**
 
 - Vaibhav Sharma
 - Shreya Khantal
